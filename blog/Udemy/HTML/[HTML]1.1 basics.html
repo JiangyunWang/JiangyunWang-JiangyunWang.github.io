@@ -4,17 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>[HTML]1.1 basics</title>
 </head>
 <body>
-    Format
+    <H1>Format, Element, basic tags</H1>
+<h3>Format</h3>
 It is necessary for html to have DOCTYPE at the first line: indicate using HTML5
 MDN: is the offical document for HTML
+
 Elements
 Head: provides general information(metadata) about the document, including its title and links
 Everything we don't see as users: files
 Body: represents the content of an HTML document 
 title: in head as metadate：determines the name of tab and serach engine for other pages
 title in search engine if from the title of html
+
+Basic tags
+Heading: from H1 to H6
+<H1>H1</H1>
+<h2>H2</h2>
+<H6>H6</H6>
+Each heading element will create a new line
+Paragraph tag: &lt; p &gt;
+    block level element v.s inline elements
+bold: &lt;b&gt;, take its own line
+    substitute one: &lt;strong&gt; more meaningful
+italize: &lt;i&gt;
+    substitute one: &lt;em&gt; means emphasize
+insert HTML code in HTML file:  &lt;xmp&gt;
+List:
+ordered list & bullet List
+1. ordered list: &lt;ol&gt; => order List
+    list elements: &lt;li&gt;
+2. unordered list: &lt;ul&gt; => unordered List
+    list elements: &lt;li&gt;
+3. order in order
+<ol> 
+ <li>Order 1</li>
+    <ul>
+        <li>Order 1.1</li>
+        <li>Order 1.2</li>
+    </ul>
+ <li>Order 2</li>
+</ol>
+<xmp><ol> 
+    <li>Order 1</li>
+       <ul>
+           <li>Order 1.1</li>
+           <li>Order 1.2</li>
+       </ul>
+    <li>Order 2</li>
+   </ol></xmp>
+   ignore class and data-line
+
+div: the generic container for flow content=> group things together
+   block level element
+
+span: the generic container
+   inline level element
+
+HTML Attributes
+img
+
 </body>
 </html>
