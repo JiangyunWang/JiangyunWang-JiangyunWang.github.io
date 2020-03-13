@@ -1,0 +1,211 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[HTML]2.intermediate</title>
+</head>
+
+<body>
+    <h1>Tables, Forms, Labels, Simple Validations</h1>
+    <h3>Tables</h3>
+    <ul>
+        <li><strong>symbol:</strong>
+            <ul>
+                <li><em>table element:</em>&lt;table&gt; & &lt;/table&gt;</li>
+                <li><em>table row:</em>&lt;tr&gt; & &lt;/tr&gt; </li>
+                <li><em>table cell:</em>&lt;td&gt; & &lt;/td&gt; </li>
+                <li>example:<br>
+                    &lt;table&gt; <br>
+                    <!-- &nbsp; : force an extra space -->
+                    &nbsp;&nbsp; &lt;tr&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [cell element]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;/td&gt;<br>
+                    &nbsp;&nbsp; &lt;/tr&gt;<br>
+                    &lt;/table&gt;<br>
+                </li>
+            </ul>
+        </li>
+        <li><strong>border:</strong>Two ways to add boarder in the table
+            <ol>
+                <li>CSS: better solution than HTML</li>
+                <li>HTML: &lt;table <em>border="1"</em>&gt; => old way, not recommand</li>
+            </ol>
+        </li>
+        <li>
+            <strong>Header:</strong>
+            <ul>
+                <li>
+                    <em>symbol:</em> &lt;th&gt; & &lt;/th&gt;
+                <li>example:<br>
+                    &lt;table border="1"&gt;<br>
+                    &nbsp;&nbsp; &lt;tr&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Header cell]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;/th&gt;<br>
+                    &nbsp;&nbsp; &lt;/tr&gt;<br>
+
+                    &nbsp;&nbsp; &lt;tr&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [cell element]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;/td&gt;<br>
+                    &nbsp;&nbsp; &lt;/tr&gt;<br>
+                    &lt;/table&gt;<br>
+                </li>
+                <li>
+                    <strong>Additional tag:</strong> more meaningful
+                    <ul>
+                        <li><em>symbol:</em>&lt;thead&gt; & &lt;tbody&gt; </li>
+                        <li>sequence:
+                            &lt;table&gt;,&lt;thead&gt;,&lt;tr&gt;,&lt;th&gt;......&lt;/thead&gt;,&lt;tbody&gt;,&lt;tr&gt;,&lt;td&gt;...
+                        </li>
+                    </ul>
+                </li>
+        </li>
+    </ul>
+
+    </li>
+
+    </ul>
+
+    <h3>Forms</h3>
+    <em>Getting User Input, a container of some of inputs</em>
+    <ul>
+        <li><strong>tags:</strong> &lt;form&gt;,&lt;input&gt;,&lt;label&gt;</li>
+        <li><strong>Form tag:</strong>
+            <ul>
+                <li>
+                    create an HTML form for user input, contains more of the form elements
+                </li>
+                <li><em>format:</em><br>
+                    &lt;form action="[URL]" method="[method(post/get)]"&gt; <br>
+                    [All inputs in here]<br>
+                    &lt;/form&gt;
+                    <ul>
+                        <li><em>action: </em>the URL to send form data to </li>
+                        <li><em>method: </em>the type of HTTP request</li>
+                        <li>* forms won't actually do anything, unless it connects with the backend JS. Currently, just
+                            frontend</li>
+                    </ul>
+                </li>
+                <li>
+
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>Input tag:</strong>
+            <ul>
+                <li>
+                    The input tag creates interactive controls.
+                </li>
+                <li><em>type attribute:</em>
+                    <ol>
+                        <li>text: <input type="text"></li>
+                        <li>date: <input type="date"></li>
+                        <li>color: <input type="color"></li>
+                        <li>file: <input type="file"></li>
+                        <li>checkbox: <input type="checkbox"></li>
+                        <li>radio: <input type="radio">
+                            <ul>
+                                <li>example for only one radio can be choose:<br>
+                                    name attribute: identical name can force only one radio to be choose<br>
+                                    value attribute: the value will be showed in the url
+                                    <form>
+                                        <label for="dogs">Dogs:</label>
+                                        <input name="petChoice" id="dogs" type="radio" value="dogs">
+                                        <label for="cats">Cats:</label>
+                                        <input name="petChoice" id="cats" type="radio" value="cats">
+                                        <button>Go!</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>password: <input type="password"></li>
+                        <li>sumbit: <input type="submit"><br>
+                            substitute: &lt;button&gt;Submit Sub&lt;/button&gt;<button>Submit Sub</button>
+                        </li>
+                        <li>checkbox: <input type="checkbox"></li>
+                    </ol>
+                </li>
+                <li><em>placeholder attribute:</em>&lt;input type="[type]" placeholder="[text]"&gt;</li>
+                <li>name attribute: give name of data and trace later => backend</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Select tag: </strong> a dropdown menu
+            <ul>
+                <li>
+                    Option tag: put the selected item
+                </li>
+                <li>example: <br>
+                    <select>
+                        <option value="option">item</option>
+                    </select><br>
+                    &lt;select name="[name of the select (color...)]"&gt; <br>
+                    &nbsp; &nbsp; &lt;option value="[value of the option]"&gt;<br>
+                    &nbsp; &nbsp;&nbsp; &nbsp; [item]<br>
+                    &nbsp; &nbsp;&lt;/option&gt;<br>
+                    &lt;/select&gt;</li>
+            </ul>
+        </li>
+        <li>
+            <strong>textarea tag: </strong>
+            <ul>
+                <li>
+                    <em>Format: </em><br>
+                    &lt;textarea name="[name of textarea]" id="" cols="30" rows="10"&gt;&lt;textarea&gt;
+                </li>
+            </ul>
+        </li>
+
+
+
+    </ul>
+
+        <strong>Labels</strong>
+        <ul>
+            <li>
+                Making each element accessible, add captions to explain each functionality of the input element
+            </li>
+            <li>
+                <em>Format: </em>&lt;label&gt; & &lt;/label&gt;
+            </li>
+            <li>
+                <em>Example:</em>
+                <form>
+                    <label for="username">Username: </label>
+                    <input id="username" type="text">
+                    </input>
+                </form>
+                Code: for and id attributes should be matched
+                <xmp>
+                    <form>
+                        <label for="username">Username: </label>
+                        <input id="username" type="text">
+                        </input>
+                    </form>
+                </xmp>
+
+            </li>
+        </ul>
+
+<strong>Simple Validations</strong>
+<ul>
+    <li>
+        <strong>required attribute: </strong>validate that an input is not empty
+        <ul>
+            <li>check for not empty</li>
+        </ul>
+    </li>
+    <li>There are also type Validations. Changing "type" from "text" to "email"</li>
+    <li>More custom: change <em>required</em> to <em>pattern="[pattern formate]" required title="Message to show the User the reuired condition"</em></li>
+</ul>
+<strong>Additional:</strong>
+&lt;dev&gt; has less spacing than  &lt;p&gt;
+</body>
+
+</html>

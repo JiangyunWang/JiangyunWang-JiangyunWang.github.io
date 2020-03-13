@@ -163,9 +163,9 @@
         <h1>Blog.</h1>
         <div id="blogs"></div>
       </div>
-      <div id="udemy_section">
+      <div id="self_learning_section">
         <h1>Udemy.</h1>
-        <div id="udemy"></div>
+        <div id="self_learning"></div>
       </div>
       <div id="footer">
         <a href="https://github.com/JiangyunWang/JiangyunWang.github.io" target="_blank">Jocelyn Wang</a>
@@ -206,22 +206,22 @@
       }).fail(function() {
         return (document.getElementById("blog_section").style.display = "none");
       });
-      // calls of udemy
-      $.getJSON("udemy.json", function(udemy) {
-        udemy = udemy || [];
-        if (udemy.length == 0) {
-          return (document.getElementById("udemy_section").style.display =
+      // calls of self_learning
+      $.getJSON("self_learning.json", function(self_learning) {
+        self_learning = self_learning || [];
+        if (self_learning.length == 0) {
+          return (document.getElementById("self_learning_section").style.display =
             "none");
         }
-        for (var i = 0; i < udemy.length; i++) {
-          $("#udemy").append(`
-            <a href="./Udemy/HTML/${udemy[i].url_title}/" target="_blank">
+        for (var i = 0; i < self_learning.length; i++) {
+          $("#self_learning").append(`
+            <a href="./Udemy/HTML/${self_learning[i].url_title}/" target="_blank">
                 <section>
-                    <img src="./Udemy/HTML/${udemy[i].url_title}/${udemy[i].top_image}">
-                    <div class="udemy_container">
-                        <div class="section_title">${udemy[i].title}</div>
+                    <img src="./Udemy/HTML/${self_learning[i].url_title}/${self_learning[i].top_image}">
+                    <div class="self_learning_container">
+                        <div class="section_title">${self_learning[i].title}</div>
                         <div class="about_section">
-                            ${udemy[i].sub_title}
+                            ${self_learning[i].sub_title}
                         </div>
                     </div>
                 </section>
@@ -229,7 +229,7 @@
             `);
         }
       }).fail(function() {
-        return (document.getElementById("udemy_section").style.display = "none");
+        return (document.getElementById("self_learning_section").style.display = "none");
       });
     </script>
 
